@@ -7,15 +7,15 @@
     
 ## Analisis Flow-Graph HTTP
 
-![gambar](asset/flow-graph.png)
+![gambar](assets/flow-graph.png)
 
 "Flow Graph" adalah fitur visualisasi yang memungkinkan Anda melihat interaksi antara host dalam bentuk grafik. Grafik ini membantu Anda memahami bagaimana aliran (flow) data berjalan dari satu host ke host lainnya, serta bagaimana aliran tersebut berkembang dari waktu ke waktu. Berikut adalah komponen utama dari "Flow Graph":
 
 ### Connection
-![gambar](asset/connection-flow-graph.png)
+![gambar](assets/connection-flow-graph.png)
 
 ### Terminate
-![gambar](asset/terminate-flow-graph.png)
+![gambar](assets/terminate-flow-graph.png)
 
 1. **Node (Node):**
 - Node dalam "Flow Graph" mewakili host atau alamat IP yang terlibat dalam aliran. Ada dua jenis node: node sumber (source node) dan node tujuan (destination node).
@@ -46,7 +46,7 @@ Grafik aliran ini memberikan pandangan yang jelas tentang bagaimana komunikasi t
 
 # HTTP Packet Counter
 
-![](asset/HttpPacket.PNG)
+![](assets/HttpPacket.PNG)
 
 
 HTTP packets terletak pada packet:4,18,27,38
@@ -140,20 +140,20 @@ Pada file http_witp_jpeg.cap Response yang menampilkan gambar terletak pada pack
 
 **Isi Packet 61:(Request Terletak Pada Packet 48)**
 
-![](asset/Gambar1.PNG)
+![](assets/Gambar1.PNG)
 
 **Isi Packet 72:(Request Terletak Pada Packet 50)**
 
-![](asset/Gambar2.PNG)
+![](assets/Gambar2.PNG)
 
 **Isi Packet 259:(Request Terletak Pada Packet 240)**
 
-![](asset/Gambar3.PNG)
+![](assets/Gambar3.PNG)
 
 **Isi Packet 269:(Request Terletak Pada Packet 241)**
 
-![](asset/Gambar4.PNG)
+![](assets/Gambar4.PNG)
 
 **Isi Packet 479:(Request Terletak Pada Packet 278)**
 
-![](asset/Gambar5.PNG)
+![](assets/Gambar5.PNG)
