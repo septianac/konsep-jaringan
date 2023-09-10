@@ -1,6 +1,6 @@
 # Perbedaan versi versi HTTP
 
-![](minggu3/Comparison-of-HTTP-versions.jpg)
+![](Comparison-of-HTTP-versions.jpg)
 
 1. Rizal Maulana (3122600004)
 2. Ezra Septian Handyanto (3122600016)
