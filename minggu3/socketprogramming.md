@@ -74,3 +74,20 @@
 ### Hubungan dengan Socket Programming:
 
 Kode-kode ini memanfaatkan fungsi-fungsi dasar dari pustaka socket. Mereka menciptakan, mengikat, mendengarkan, dan menerima koneksi pada sisi server. Pada sisi klien, mereka menciptakan soket, menghubungkan ke server, dan melakukan operasi baca/tulis untuk berkomunikasi. Dengan cara ini, mereka membentuk dasar dari komunikasi jaringan menggunakan protokol TCP/IP melalui socket. Masing-masing contoh menunjukkan berbagai aspek socket programming, dari penanganan koneksi tunggal hingga multi-threading untuk mendukung banyak koneksi secara bersamaan.
+
+
+### jelaskan apakah connection terminationnya full closed atau half closed
+
+Dalam konteks protokol jaringan seperti TCP (Transmission Control Protocol), istilah "connection termination" mengacu pada cara dua pihak yang terhubung (biasanya dua komputer atau perangkat) mengakhiri koneksi mereka. Terdapat dua konsep utama yang berkaitan dengan terminasi koneksi: "full closed" dan "half closed."
+
+1. **Full Closed (Koneksi Ditutup Sepenuhnya)**:
+   - Dalam terminasi koneksi "full closed," kedua pihak sepakat untuk mengakhiri koneksi secara bersamaan.
+   - Kedua pihak mengirimkan pesan FIN (Finish) kepada yang lain untuk menandakan bahwa mereka telah selesai dengan pertukaran data dan ingin mengakhiri koneksi.
+   - Setelah kedua pihak telah mengirimkan pesan FIN dan menerima pesan FIN dari yang lain, koneksi dianggap ditutup sepenuhnya, dan sumber daya yang terkait dengan koneksi (seperti soket jaringan) akan dibebaskan.
+
+2. **Half Closed (Koneksi Ditutup Separuh)**:
+   - Dalam terminasi koneksi "half closed," salah satu pihak mengirimkan pesan FIN untuk mengindikasikan bahwa mereka telah selesai dengan pertukaran data dan ingin mengakhiri koneksi, sementara pihak lain ingin tetap terbuka untuk menerima data tambahan.
+   - Dalam situasi ini, koneksi tetap terbuka hanya dalam satu arah. Pihak yang mengirimkan pesan FIN tidak lagi mengirim data, tetapi masih dapat menerima data dari pihak lain.
+   - Ini dapat berguna dalam skenario di mana satu pihak ingin mengakhiri transmisi data tetapi masih ingin menerima respons atau konfirmasi dari pihak lain.
+
+Pilihan antara terminasi "full closed" dan "half closed" tergantung pada kebutuhan aplikasi dan protokol yang digunakan. Biasanya, terminasi "full closed" lebih umum karena kedua pihak sepakat untuk mengakhiri koneksi secara bersamaan. Namun, dalam beberapa situasi, seperti protokol FTP (File Transfer Protocol) yang menggunakan mekanisme "half closed," terminasi "half closed" dapat berguna untuk menjaga komunikasi tetap terbuka dalam satu arah sambil menghentikan pengiriman data dalam arah lainnya.
